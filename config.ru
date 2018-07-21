@@ -1,5 +1,8 @@
 require 'rack'
 require_relative 'presentation'
+require_relative 'sass'
+
+Sass.compile!
 
 use Rack::Static, urls: ['/public']
 

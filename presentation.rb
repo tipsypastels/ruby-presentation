@@ -20,8 +20,23 @@ class Presentation
 
   def format_slides
     @slides.map do |slide|
-      "<div class='slide'>#{slide}</div>"
+      "<article class='slide'>#{slide}</article>"
     end.join("\n")
+  end
+
+  def wrap_slides
+    "<main class='presentation'>#{format_slides}</main>"
+  end
+
+  STYLESHEETS = [
+    "public/slick/slick.css",
+    "public/slick/slick-theme.css",
+    "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css",
+    "public/css/index.css"
+  ]
+
+  def stylesheets
+    STYLESHEETS.map { |href| "<link rel='stylesheet' type='text/css' href='#{href}'>" }.join("\n")
   end
 
   def html
@@ -29,13 +44,14 @@ class Presentation
       <html>
         <head>
           <title>My Presentation</title>
+          #{stylesheets}
         </head>
 
         <body>
-          #{format_slides}
+          #{wrap_slides}
 
           <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-          <script src='slick/slick.min.js'></script>
+          <script src='public/slick/slick.min.js'></script>
 
           <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
