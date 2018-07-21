@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Roboto');
+
+$ruby: #f63c38;
+$foreground: #f5f5f5;
+$background: darken($foreground, 10%);
+
+@import '_util';
+
+h1, h2, h3 {
+  color: $ruby;
+  font-family: Comfortaa;
+}
+
+body {
+  overflow: hidden;
+  background-color: $background;
+
+  padding: 5vh 3em;
+  font-family: Roboto;
+  font-size: 2.4em;
+
+  main.presentation {
+    border-radius: 2em;
+    padding: 6em;
+    height: 90vh;
+    background-color: $foreground;
+
+    &:not(.slick-initialized) article.slide {
+      display: none;
+    }
+
+    article.slide {
+
+    }
+  } 
+}
