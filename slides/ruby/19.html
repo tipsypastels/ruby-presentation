@@ -1,0 +1,21 @@
+<h2>Example 5</h2>
+
+<pre><code class="ruby">
+  class User
+    attr_accessor :name, :permissions
+
+    def initialize(name, permissions)
+      @name = name
+      @permissions = permissions
+      @post_count = 0
+    end
+
+    def promote
+      @permissions = :admin
+    end
+
+    def make_post
+      @post_count += 1
+    end
+  end
+</code></pre>

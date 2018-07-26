@@ -1,0 +1,10 @@
+<h2>Proc Parameters</h2>
+<p>Proc parameters are written inside the pipe operator. When you provide them to a proc when calling it, you write them as arguments to the <em>call</em> method.</p>
+
+<pre><code class="ruby">
+  say_hello_to = proc do |name|
+    puts "Hello #{name}"
+  end
+
+  say_hello_to.call("Kim")
+</code></pre>

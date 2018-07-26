@@ -1,0 +1,20 @@
+<h2>Calling Methods inside Classes</h2>
+There is no need to use a <em>this</em> or similar prefix when calling an internal method. <em>self</em> is an optional prefix.
+<pre><code class="ruby">
+  class MyClass
+    def initialize
+      # TO CALL some_method
+      # JUST USE
+
+      some_method
+
+      # OR
+
+      self.some_method
+    end
+
+    def some_method
+
+    end
+  end
+</code></pre>

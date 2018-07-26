@@ -6,24 +6,26 @@ $background: darken($foreground, 10%);
 
 @import '_util';
 
-h1, h2, h3 {
+h1, h2, h3, a {
   color: $ruby;
   font-family: Comfortaa;
+  display: block;
 }
 
 body {
   overflow: hidden;
   background-color: $background;
 
-  padding: 5vh 3em;
+  padding: 2.5vh 1.5em;
   font-family: Roboto;
   font-size: 2.4em;
 
   main.presentation {
     border-radius: 2em;
-    padding: 3em;
+    padding: 1em;
     height: 90vh;
     background-color: $foreground;
+    border: 4px solid $ruby;
 
     &:not(.slick-initialized) article.slide {
       display: none;

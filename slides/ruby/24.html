@@ -1,0 +1,5 @@
+<p>That <em>env</em> variable contains information about the request type, so if we wanted to respond to specific request types or pages we could apply some kind of conditional to that.</p>
+
+<p>We won't do that here because it would be a lot of code but there's nothing really complicated about it. To get a list of what data the environment contains, simply use <em>puts env</em> inside the proc.</p>
+
+<p>Of course, you also don't have to put the array containing the status, content type, and HTML directly inside the proc. You can call methods, create classes, or have any kind of arbitrary complicated process to determine the HTML to be returned - as long as the proc ultimately returns an array of the correct type.</p>

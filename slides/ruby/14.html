@@ -1,0 +1,15 @@
+<h2>Implicit Hashes</h2>
+
+<pre><code class="ruby">
+  def create_user(hash)
+    # create the user somehow
+  end
+
+  create_user({
+    username: "asdf",
+    password: "asdf"
+  })
+
+  create_user username: "asdf",
+              password: "asdf"
+</code></pre>

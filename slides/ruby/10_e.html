@@ -1,0 +1,15 @@
+<h2>Example 3</h2>
+
+<pre><code class="ruby">
+  user = {
+    username: "karatekid",
+    post_count: 1,
+    permissions: :user
+  }
+
+  # grant a user admin
+  user[:permissions] = :admin
+
+  # increase the postcount
+  user[:post_count] += 1
+</code></pre>

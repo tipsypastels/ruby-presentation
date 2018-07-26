@@ -1,0 +1,16 @@
+<h2>Symbols</h2>
+
+<pre><code class="ruby">
+  :this_is_a_symbol
+</code></pre>
+
+Symbols are similar to strings, but they're <em>immutable</em>, and because of that every symbol of the same name refers to the same object in memory. We can test this using the <em>object_id</em> property.
+
+<pre><code class="ruby">
+  # Two strings, even if they have the same value, have different object IDs.
+  "a".object_id != "a".object_id
+
+  # Symbols don't though.
+  :a.object_id == :a.object_id
+</code></pre>
+

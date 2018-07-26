@@ -1,0 +1,14 @@
+<h2>Rack</h2>
+Rack is a simple framework used to make a web server. It's used in Ruby on Rails and nearly every Ruby web framework. The base functionality is incredible simple.
+
+<pre><code class="ruby">
+  require 'rack'
+
+  site = proc do |env|
+    ['200', {'Content-Type' => 'text/html'}, ['get rack\'d']]
+  end
+
+  run site
+</code></pre>
+
+<p>It's not recommended to use a regular Ruby file for your rack server. Instead, convention is to name the file <em>config.ru</em>, which lets you run it using the <em>rackup</em> console command.</p>

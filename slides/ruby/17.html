@@ -1,0 +1,17 @@
+<h2>Privacy</h2>
+<p>In Ruby, all instance variables are private by default and all methods are public by default.</p>
+
+<pre><code class="ruby">
+  class MyClass
+    attr_accessor :some_property
+
+    def initialize(some_property)
+      @some_property = some_property
+    end
+
+    private
+
+    def some_private_method
+    end
+  end
+</code></pre>

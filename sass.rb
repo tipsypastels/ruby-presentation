@@ -1,7 +1,5 @@
-module Sass
-  module_function
-
-  def compile!
-    system 'sass sass/index.scss:public/css/index.css'
-  end
+def compile_sass!
+  system 'sass sass/index.scss:public/css/index.css'
+rescue
+  nil
 end
